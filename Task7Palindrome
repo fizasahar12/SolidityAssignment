@@ -1,0 +1,19 @@
+pragma solidity ^0.8.15;
+//SPDX-License-Identifier:unlicense
+contract PalindromeTask{
+    function Palindrome(uint n) public pure returns(uint){
+     uint original;
+     uint remainder;
+     uint reverse = 0;
+     original = n;
+     while (n > 0){
+     remainder = n%10;
+     reverse =  reverse*10 + remainder;
+       n = n/10;
+    }
+if (original == reverse){
+  return 1;
+}
+return 0;
+    }
+}
